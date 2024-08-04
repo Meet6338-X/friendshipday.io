@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Friendship Day Card</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Concert+One|Pacifico");
+
+      body {
+        background: radial-gradient(
+          ellipse at center,
+          rgba(83, 40, 188, 1) 0%,
+          rgba(44, 17, 141, 1) 100%
+        );
+        perspective: 1000px;
+        display: flex;
+        transform-style: preserve-3d;
+        font-family: "Pacifico", cursive;
+      }
+
+      .card {
+        top: 20vh;
+        pointer-events: none;
+        transform: translateZ(7em);
+        padding: 30px;
+        background: linear-gradient(
+          to bottom,
+          #020333 0%,
+          #020333 75%,
+          #ffffff 75%,
+          #ffffff 100%
+        );
+        border-radius: 5px;
+        width: 400px;
+        height: 250px;
+        margin: auto;
+        transform-style: preserve-3d;
+        backface-visibility: hidden;
+        display: flex;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        position: relative;
+      }
+
+      .card:after {
+        content: " ";
+        position: absolute;
+        width: 100%;
+        height: 10px;
+        border-radius: 50%;
+        left: 0;
+        bottom: -50px;
+        box-shadow: 0 30px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .card-content {
+        margin: auto;
+        text-align: center;
+        transform-style: preserve-3d;
+      }
+
+      .card h1 {
+        transform: translateZ(100px);
+        color: #e0e0c8;
+        font-size: 2.7em;
+        font-weight: 400;
+      }
+
+      .card p {
+        transform: translateZ(50px);
+        color: #dc7532;
+        font-size: 1.7em;
+        display: block;
+      }
+
+      .card .related {
+        transform: translateZ(80px);
+        color: #c04f87;
+        font-size: 1.7em;
+        font-family: "Concert One", cursive;
+        font-weight: 400;
+      }
+
+      .card a {
+        color: #dc7532;
+        pointer-events: auto;
+      }
+
+      bokeh {
+        position: fixed;
+        width: 5vmin;
+        height: 5vmin;
+        border-radius: 50%;
+        animation-name: explosion;
+        animation-iteration-count: infinite;
+        animation-direction: reverse;
+        animation-timing-function: cubic-bezier(0.84, 0.02, 1, 1);
+      }
+
+      @keyframes explosion {
+        0% {
+          opacity: 0;
+        }
+        70% {
+          opacity: 1;
+        }
+        100% {
+          transform: translate(50vw, 50vh);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <md>
+      <p align="center">
+        <img
+          src="https://komarev.com/ghpvc/?username=meet6338-x&label=Profile%20views&color=0e75b6&style=flat"
+          alt="meet6338-x"
+        />
+      </p>
+    </md>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <div class="card">
+      <div class="card-content">
+        <h1>Happy Friendship Day 🎉</h1>
+        <p class="related">🌟 To all my College cool friends 🌟</p>
+        <p>
+          <small>
+            by
+            <a href="https://github.com/ManajitPal" target="_blank"
+              >~ Meet Shah</a
+            >
+          </small>
+        </p>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      var card = $(".card");
+      $(document).on("mousemove", function (e) {
+        var ax = -($(window).innerWidth() / 2 - e.pageX) / 20;
+        var ay = ($(window).innerHeight() / 2 - e.pageY) / 10;
+        card.css({
+          transform:
+            "rotateY(" + ax + "deg) rotateX(" + ay + "deg) translateZ(7em)",
+        });
+      });
+    </script>
+  </body>
+</html>
